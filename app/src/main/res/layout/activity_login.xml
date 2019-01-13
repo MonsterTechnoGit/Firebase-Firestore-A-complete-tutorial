@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authentication.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/emailFiled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/passwordFiled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/signinButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:backgroundTint="#c90751"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Create a new account"
+            android:textAllCaps="false"
+            android:backgroundTint="#c93407"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

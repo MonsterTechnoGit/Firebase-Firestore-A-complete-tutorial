@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "498575931816",
+    "firebase_url": "https://fir-firestore-85ecb.firebaseio.com",
+    "project_id": "fir-firestore-85ecb",
+    "storage_bucket": "fir-firestore-85ecb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498575931816:android:ef5493b7374daac0",
+        "android_client_info": {
+          "package_name": "com.monstertechno.firestoretutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498575931816-1c6npetatc6c50cnu3d6db7fj7b159nu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monstertechno.firestoretutorial",
+            "certificate_hash": "2b8c2b083e0c6f13ee343a807e3706396b9f3647"
+          }
+        },
+        {
+          "client_id": "498575931816-hukjagafmt3pna4okhnhccldrmtqg71d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGNeGmyCUaRPPFH0elb7fbEkHAn7TUHMY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498575931816-hukjagafmt3pna4okhnhccldrmtqg71d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
