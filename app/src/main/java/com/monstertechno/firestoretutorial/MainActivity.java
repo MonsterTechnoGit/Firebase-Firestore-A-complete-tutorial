@@ -8,12 +8,13 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.monstertechno.firestoretutorial.authentication.LoginActivity;
+import com.monstertechno.firestoretutorial.authentication.StoreUserData;
 
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private String curent_user_id;
-    private Button signout;
+    private Button signout,storedata;
 
     @Override
     protected void onStart() {
@@ -36,12 +37,19 @@ public class MainActivity extends AppCompatActivity {
         curent_user_id = mAuth.getUid();
 
         signout = findViewById(R.id.signout);
+        storedata = findViewById(R.id.Activityopen);
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mAuth.signOut();
                 startActivity(new Intent(MainActivity.this,LoginActivity.class));
                 finish();
+            }
+        });
+        storedata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,StoreUserData.class));
             }
         });
     }
