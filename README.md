@@ -2,4 +2,6 @@
 
 1. Part 1 - Login interface using firebase authentication - https://youtu.be/y6mvLlAQ_lk
 2. Part 2 - Sign Up interface using firebase authentication with sign out. - https://youtu.be/1xHeYhdJItk
-3. Part 3 - Storing user data like image,name,phone and many more things in firestore - SOON
+3. Part 3 - Chose Image From Gallary & Show in ImageView - https://youtu.be/d6Xzp1ShtoE
+4. Part 4 - Storing UserImage, UserName ,UserPhone & UserAddress to firestore - SOON
+
