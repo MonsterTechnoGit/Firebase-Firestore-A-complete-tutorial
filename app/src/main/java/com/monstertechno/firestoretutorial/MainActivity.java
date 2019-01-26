@@ -1,13 +1,19 @@
 package com.monstertechno.firestoretutorial;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
     private Button signout, storedata;
 
     FirebaseFirestore firebaseFirestore;
+
+    ImageView userImage;
+    TextView userName,userPhone,userAddress;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onStart() {
@@ -45,6 +55,43 @@ public class MainActivity extends AppCompatActivity {
         curent_user_id = mAuth.getUid();
 
         firebaseFirestore = FirebaseFirestore.getInstance();
+
+        userImage = findViewById(R.id.user_image);
+        userName = findViewById(R.id.user_name);
+        userPhone = findViewById(R.id.user_phone);
+        userAddress = findViewById(R.id.user_address);
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Wait, We are checking...");
+        progressDialog.show();
+        
+
+        firebaseFirestore.collection("Users").document(curent_user_id).get().
+                addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if(task.isSuccessful()){
+                            progressDialog.dismiss();
+                            if(task.getResult().exists()){
+                                String image = task.getResult().getString("userImage");
+                                String name = task.getResult().getString("userName");
+                                String phone = task.getResult().getString("userPhone");
+                                String address = task.getResult().getString("userAddress");
+
+                                userName.setText(name);
+                                userPhone.setText(phone);
+                                userAddress.setText(address);
+
+                                Glide.with(MainActivity.this)
+                                        .load(image)
+                                        .into(userImage);
+                            }
+                        }else {
+                            Toast.makeText(MainActivity.this,"Error: "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
 
         signout = findViewById(R.id.signout);
         storedata = findViewById(R.id.Activityopen);
