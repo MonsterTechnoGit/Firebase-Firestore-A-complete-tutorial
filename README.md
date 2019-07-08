@@ -9,4 +9,4 @@
 7. Part 7 - How to store data in Collection in Firestore - SOON
 8. Part 8 - How to get a full collection of data from Firestore and show in RecyclrView - SOON
 9. Part 9 - How to search a Firestore collection list by Value - SOON
-10 Part 10 - How to store user Like in Firestore one user can Like only one time - SOON
+10. Part 10 - How to store user Like in Firestore one user can Like only one time - SOON
