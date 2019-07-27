@@ -177,4 +177,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,"You have to add something",Toast.LENGTH_LONG).show();
         }
     }
+
+    public void openListActivity(View view) {
+        startActivity(new Intent(this,ListActivity.class));
+    }
 }
